@@ -10,12 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Fragment+Mono&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #FBFBF8;
-    --ink: #17170F;
-    --ink-soft: #55554A;
-    --hairline: #E3E3DA;
-    --blue: #2B3CFF;      /* the one loud thing */
-    --blue-ink: #FBFBF8;  /* text on blue */
+    --paper: #FFFFFF;
+    --ink: #0A0A0A;
+    --ink-soft: #5C5C5C;
+    --hairline: #E5E5E5;
+    --red: #E30613;       /* the one loud thing */
+    --red-ink: #FFFFFF;   /* text on red */
     --max: 1020px;
     --pad: clamp(20px, 5vw, 48px);
   }
@@ -37,11 +37,11 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  ::selection { background: var(--blue); color: var(--blue-ink); }
+  ::selection { background: var(--red); color: var(--red-ink); }
 
   a { color: inherit; text-decoration: none; }
   a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--blue);
+    outline: 2px solid var(--red);
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -90,7 +90,7 @@
     font-size: clamp(56px, 12vw, 148px);
     margin-bottom: 28px;
   }
-  .hero h1 .accent { color: var(--blue); }
+  .hero h1 .accent { color: var(--red); }
   .hero .intro {
     max-width: 560px;
     font-size: clamp(17px, 2vw, 19px);
@@ -109,11 +109,11 @@
     border-radius: 999px;
     transition: background .15s ease, color .15s ease, border-color .15s ease;
   }
-  .hero-meta a.chip:hover { background: var(--blue); border-color: var(--blue); color: var(--blue-ink); }
+  .hero-meta a.chip:hover { background: var(--red); border-color: var(--red); color: var(--red-ink); }
   .status { display: flex; align-items: center; gap: 8px; }
   .status .dot {
     width: 8px; height: 8px; border-radius: 50%;
-    background: var(--blue);
+    background: var(--red);
     animation: pulse 2.4s ease-in-out infinite;
   }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
@@ -150,7 +150,7 @@
     padding: 0 6px; margin-left: -6px;
     transition: background .12s ease, color .12s ease;
   }
-  .work-row:hover .title, .work-row:focus-within .title { background: var(--blue); color: var(--blue-ink); }
+  .work-row:hover .title, .work-row:focus-within .title { background: var(--red); color: var(--red-ink); }
   .work-row .stack { text-align: right; white-space: nowrap; }
   .work-row .desc {
     grid-column: 1 / -1;
@@ -159,7 +159,7 @@
     font-size: 15.5px;
   }
   .work-row .desc a { color: var(--ink); border-bottom: 1px solid var(--hairline); transition: border-color .15s ease; }
-  .work-row .desc a:hover { border-color: var(--blue); color: var(--blue); }
+  .work-row .desc a:hover { border-color: var(--red); color: var(--red); }
 
   /* ---------- experience ---------- */
   .xp-row {
@@ -171,7 +171,7 @@
   }
   .xp-row .when { padding-top: 3px; }
   .xp-row h3 { font-size: 18px; font-weight: 650; }
-  .xp-row .org { color: var(--blue); font-weight: 600; }
+  .xp-row .org { color: var(--red); font-weight: 600; }
   .xp-row p { color: var(--ink-soft); font-size: 15.5px; margin-top: 6px; max-width: 620px; }
 
   /* ---------- about / footer ---------- */
@@ -190,10 +190,10 @@
     margin: 10px 0 34px;
     transition: color .15s ease;
   }
-  .footer-inner .big-cta:hover { color: var(--blue); }
+  .footer-inner .big-cta:hover { color: var(--red); }
   .footer-links { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-bottom: 40px; }
   .footer-links a { font-family: "Fragment Mono", monospace; font-size: 13.5px; border-bottom: 1px solid var(--hairline); padding-bottom: 2px; transition: border-color .15s ease, color .15s ease; }
-  .footer-links a:hover { color: var(--blue); border-color: var(--blue); }
+  .footer-links a:hover { color: var(--red); border-color: var(--red); }
   .colophon { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 
   /* ---------- decorative geometry ---------- */
@@ -209,7 +209,7 @@
   }
   .geo-hero .stroke { fill: none; stroke: var(--ink); stroke-width: 1.25; }
   .geo-hero .stroke-soft { fill: none; stroke: var(--hairline); stroke-width: 1.25; }
-  .geo-hero .fill-blue { fill: var(--blue); }
+  .geo-hero .fill-blue { fill: var(--red); }
   .geo-hero .drift { animation: drift 9s ease-in-out infinite alternate; transform-origin: center; }
   @keyframes drift { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(-10px) rotate(2deg); } }
   .hero h1, .hero .intro, .hero-meta { position: relative; z-index: 1; }
@@ -224,7 +224,7 @@
     font-family: "Fragment Mono", monospace;
     font-size: 15px;
     line-height: 1;
-    color: var(--blue);
+    color: var(--red);
     background: var(--paper);
     padding-right: 8px;
   }
@@ -255,8 +255,8 @@
     vertical-align: 6%;
   }
   .work-row:hover .title::before, .work-row:focus-within .title::before {
-    background: var(--blue-ink);
-    border-color: var(--blue-ink);
+    background: var(--red-ink);
+    border-color: var(--red-ink);
   }
 
   /* connective line + node on experience rows (route topo) */
@@ -278,7 +278,7 @@
     border: 1.25px solid var(--ink);
     transform: rotate(45deg); /* diamond node */
   }
-  .xp-row:first-child::before { background: var(--blue); border-color: var(--blue); }
+  .xp-row:first-child::before { background: var(--red); border-color: var(--red); }
 
   /* footer geometry */
   footer { position: relative; overflow: hidden; }
@@ -292,7 +292,7 @@
   }
   .geo-footer .stroke { fill: none; stroke: var(--hairline); stroke-width: 1.25; }
   .geo-footer .stroke-ink { fill: none; stroke: var(--ink); stroke-width: 1.25; }
-  .geo-footer .fill-blue { fill: var(--blue); }
+  .geo-footer .fill-blue { fill: var(--red); }
   .footer-inner { position: relative; z-index: 1; }
 
   /* ---------- responsive ---------- */
@@ -312,7 +312,7 @@
 
 <nav>
   <div class="wrap nav-inner">
-    <a class="nav-name" href="#top">Phuc Tran<span style="color:var(--blue)">.</span></a>
+    <a class="nav-name" href="#top">Phuc Tran<span style="color:var(--red)">.</span></a>
     <div class="nav-links">
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
@@ -334,25 +334,32 @@
     <!-- tiny hold nodes -->
     <circle cx="95" cy="95" r="3" fill="var(--ink)" />
     <circle cx="230" cy="190" r="3" fill="var(--ink)" />
-    <circle cx="140" cy="300" r="3" fill="var(--blue)" />
+    <circle cx="140" cy="300" r="3" fill="var(--red)" />
   </svg>
   <h1 class="display">Phuc<br><span class="accent">Tran.</span></h1>
   <p class="intro">
-    Software engineer working on <strong>distributed systems</strong> — currently at <strong>Charles Schwab</strong>
-    
+    Software engineer working on <strong>event-driven systems</strong> and
+    <strong>test infrastructure</strong> — currently at <strong>Charles Schwab</strong>,
+    also designing AI evaluation problems at a YC-backed startup. CS at UT Dallas, class of 2027.
   </p>
   <div class="hero-meta">
     <a class="chip" href="https://github.com/Ph00c" target="_blank" rel="noopener">GitHub ↗</a>
     <a class="chip" href="https://www.linkedin.com/in/phucmhtran/" target="_blank" rel="noopener">LinkedIn ↗</a>
     <a class="chip" href="/resume.pdf">Résumé ↓</a>
-    <span class="status mono"><span class="dot" aria-hidden="true"></span>Open to Fall 2026 internships</span>
+    <span class="status mono"><span class="dot" aria-hidden="true"></span>Open to Summer 2027 internships</span>
   </div>
 </header>
 
 <section id="work" class="wrap">
   <div class="section-label">
     <h2>Selected Work</h2>
-    <span class="mono">03 projects</span>
+    <span class="mono">04 projects</span>
+  </div>
+
+  <div class="work-row" tabindex="0">
+    <div class="title">Yayy</div>
+    <div class="stack mono">SwiftUI · Firebase · MapKit</div>
+    <p class="desc">A social scrapbook for rave and electronic-music culture — log sets, pin venues, and relive nights with friends. Designed and shipped iOS-first through a phased build process.</p>
   </div>
 
   <div class="work-row" tabindex="0">
@@ -422,11 +429,11 @@
   <div class="about-grid">
     <div>
       <span class="mono">The work</span>
-      <p>I have extensive experience in aynschronous and concurrent systems, cloud services, networking</p>
+      <p>I like the layer where software meets reliability — <strong>message queues, test harnesses, CI pipelines</strong> — and the layer where it meets people: full-stack products that a few hundred real users depend on. Most comfortable in Java, Python, C++, and TypeScript.</p>
     </div>
     <div>
       <span class="mono">Off the clock</span>
-      <p> I also love bouldering and photography!</p>
+      <p>Usually on a bouldering wall — I co-run <strong>@dynoholics</strong>, a climbing account with friends — or cooking my way through Asian cuisine, or at an electronic show doing field research for Yayy.</p>
     </div>
   </div>
 </section>
@@ -445,7 +452,7 @@
       <a href="mailto:phucmhtran@gmail.com">phucmhtran@gmail.com</a>
       <a href="https://github.com/Ph00c" target="_blank" rel="noopener">github/Ph00c</a>
       <a href="https://www.linkedin.com/in/phucmhtran/" target="_blank" rel="noopener">linkedin/phucmhtran</a>
-      <a href="https://drive.google.com/file/d/15Sy3iJBc2THfOBX1gm2GCmzH1C7WN4Ob/view?usp=sharing">résumé</a>
+      <a href="/resume.pdf">résumé</a>
     </div>
     <div class="colophon mono">
       <span>© 2026 Phuc Tran — Texas</span>
